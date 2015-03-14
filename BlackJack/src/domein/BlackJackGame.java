@@ -5,14 +5,14 @@
  */
 package domein;
 
-import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  *
  * @author Thomas
  */
 public class BlackJackGame {
-    
+    private ArrayList<Player> players;
     private Player player;
     private Dealer dealer;
     private boolean winner;
@@ -23,6 +23,17 @@ public class BlackJackGame {
         winner = false;
     }
     
+    public BlackJackGame(int aantalSpelers, int decks){
+        players = new ArrayList<>();
+        for(int i=0;i<aantalSpelers;i++){
+            players.add(new Player("Speler"+ i));
+        }
+        this.dealer = new Dealer(decks);
+        winner = false;
+    }
+    public void welcomePlayers(){
+        players.stream().forEach(p -> System.out.println("Welkom " + p.getName() + "!"));        
+    }
     public boolean hasWinner(){
         return winner;
     }
@@ -31,18 +42,18 @@ public class BlackJackGame {
         return winner;
     }
     
-    public void startGame(){
-        this.dealer.startGame(player);
-        printHands();
+    public void startGameBasic(){
+        this.dealer.startGameBasic(player);
+        printHandsBasic();
     }
     
-    public void printHands(){
+    public void printHandsBasic(){
         System.out.println("De dealer heeft als hand " + dealer.toString());
         System.out.println("Player " + player.getName() + " heeft als hand " + player.toString());
         System.out.println("");
     }
         
-    public void checkPlayer(String move){       
+    public void checkPlayerBasic(String move){       
        switch(move){
             case "hit": dealer.dealCard(player);
                 break;
@@ -54,17 +65,18 @@ public class BlackJackGame {
         }
         
     }
-    public void checkPlayers(String move){
-        checkPlayer(move);
+    
+    public void checkPlayersBasic(String move){
+        checkPlayerBasic(move);
         checkDealer();        
         while(player.getStands() && !dealer.getStands())
             checkDealer();
         if(dealer.getStands() && player.getStands())
             winner = true;
-        printHands();
+        printHandsBasic();
         
     }
-    
+         
     public void checkDealer(){        
         if(dealer.getHand().getValue() <= 17)
             dealer.dealSelf();
@@ -76,9 +88,9 @@ public class BlackJackGame {
         
     }
     
-    public void getWinner(){
+    public void getWinnerBasic(){
         dealer.showHand();
-        printHands();
+        printHandsBasic();
         if(dealer.getHand().checkBust())
             System.out.println("Dealer busted! Players win!");
         
@@ -96,4 +108,66 @@ public class BlackJackGame {
         
     }
     
+    public void startGame(){
+        this.dealer.startGame(players);
+    }
+    public void checkPlayers(){
+        while(!areAllPlayersStanding()&&!winner){
+            for(Player pl:players){
+            checkPlayer(pl);            
+            }
+            checkDealer();
+        }
+        while(!dealer.getStands()){
+            checkDealer();
+        }
+        
+        printHands();
+    }
+    public boolean areAllPlayersStanding(){        
+        for(Player pl:players){
+            if(!pl.getStands()) return false;                
+        }
+        return true;
+    }
+    //soft hit 18
+    public void checkPlayer(Player pl){
+        if(pl.getHand().getValue()<=18)
+            dealer.dealCard(pl);
+        else
+            pl.setStands(true);
+    }
+    
+    public void printHands(){
+        players.stream().forEach(p -> System.out.println("Player " + p.getName() + " heeft als hand " + p.toString()));
+        System.out.println("De dealer heeft als hand " + dealer.toString());
+        System.out.println("");
+    }
+    
+    public void checkWinners(){
+        dealer.showHand();
+        printHands();
+        if(dealer.getHand().checkBust()){
+            System.out.println("Dealer BUSTED! Iedereen wint!!!!!");
+        }
+        else if(dealer.getHand().checkBlackJack()){
+            System.out.println("Dealer heeft BlackJack, dealer wint!");
+        }
+        else{
+            for(Player pl:players){
+                if(pl.getHand().checkBust()){
+                    System.out.println(pl.getName()+ "BUSTED! Better luck next time");
+                }
+                else if(pl.getHand().checkBlackJack()){
+                    System.out.println(pl.getName() + " got a !!!!!!!!!!!BLACKJACK!!!!!!!!!!!!!!!!!");
+                }
+                else if(pl.getHand().getValue()<=dealer.getHand().getValue()){
+                    System.out.println(pl.getName() + "has a lower amount as the dealer. Better luck next time");
+                }
+                else{
+                    System.out.println("Proficiat" + pl.getName() +". U heeft gewonnen!");
+                }
+            }
+        }
+    }
 }
