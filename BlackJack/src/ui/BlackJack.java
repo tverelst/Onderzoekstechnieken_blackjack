@@ -19,22 +19,41 @@ public class BlackJack {
      */
     public static void main(String[] args) {
          Scanner s = new Scanner(System.in);
-         System.out.println("Geef eerst spelersnaam");
-         String playerName = s.nextLine();         
-         System.out.println("Geef nu het aantal decks");
+         System.out.println("Amount of players?");
+         int players = Integer.parseInt(s.nextLine());
+         System.out.println("Amount of decks?");
          int decks = Integer.parseInt(s.nextLine());
          
-         BlackJackGame bj = new BlackJackGame(playerName,decks);
+         BlackJackGame bj = new BlackJackGame(players, decks);
          System.out.println("Welkom bij blackjack");
-         System.out.println("Speler is"+ playerName + ". Er wordt gespeeld met " + decks +" decks.");
+         bj.welcomePlayers();
+         System.out.println("Er wordt gespeeld met " + decks +" decks.");
+         System.out.println("");
          bj.startGame();         
-         while(!bj.hasWinner()){
-            System.out.println("Hit or stand?");
-            String move = s.nextLine();
-            bj.checkPlayers(move);            
-         }
-         bj.getWinner();
+         bj.checkPlayers();
+         bj.checkWinners();
          s.close();
     }
+    //1 speler tegen dealer
+//    public static void main(String[] args) {
+//         Scanner s = new Scanner(System.in);
+//         System.out.println("Geef eerst spelersnaam");
+//         String playerName = s.nextLine();         
+//         System.out.println("Geef nu het aantal decks");
+//         int decks = Integer.parseInt(s.nextLine());
+//         
+//         BlackJackGame bj = new BlackJackGame(playerName,decks);
+//         System.out.println("Welkom bij blackjack");
+//         System.out.println("Speler is "+ playerName + ". Er wordt gespeeld met " + decks +" decks.");
+//         System.out.println("");
+//         bj.startGameBasic();         
+//         while(!bj.hasWinner()){
+//            System.out.println("Hit or stand?");
+//            String move = s.nextLine();
+//            bj.checkPlayersBasic(move);            
+//         }
+//         bj.getWinnerBasic();
+//         s.close();
+//    }
     
 }

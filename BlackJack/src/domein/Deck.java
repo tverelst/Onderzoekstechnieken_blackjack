@@ -12,7 +12,7 @@ import java.util.Random;
 public class Deck {
     
     private ArrayList<Card> deck;
-    public static final String[] values = {"A", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
+    public static final String[] values = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
     public static final String[] suits ={"Hearts", "Spades", "Clubs", "Diamonds"};
     
     public Deck(){

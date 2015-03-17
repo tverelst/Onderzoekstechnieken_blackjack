@@ -20,7 +20,6 @@ public class Card {
     public String getValue() {
         return value;
     }
-
     public void setValue(String value) {
         this.value = value;
     }
@@ -29,8 +28,17 @@ public class Card {
         return faceUp;
     }
 
-    public void setFaceUp(boolean faceUp) {
-        this.faceUp = faceUp;
+    public void setFaceUp() {
+        this.faceUp = true;
     }
     
+    public void flip(){
+        this.faceUp ^= true;
+    }
+    
+    @Override
+    public String toString(){        
+        String card = suit.charAt(0)+value;
+        return card;
+    }
 }

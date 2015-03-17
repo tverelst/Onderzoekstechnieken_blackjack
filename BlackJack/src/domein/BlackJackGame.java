@@ -139,8 +139,8 @@ public class BlackJackGame {
     }
     
     public void printHands(){
-        players.stream().forEach(p -> System.out.println("Player " + p.getName() + " heeft als hand " + p.toString()));
-        System.out.println("De dealer heeft als hand " + dealer.toString());
+        players.stream().forEach(p -> System.out.println("Player " + p.getName() + " heeft waarde " + p.getHand().getValue() + " en heeft als hand " + p.toString()));
+        System.out.println("De dealer heeft waarde " + dealer.getHand().getValue() + " en heeft als hand " + dealer.toString());
         System.out.println("");
     }
     
@@ -148,24 +148,24 @@ public class BlackJackGame {
         dealer.showHand();
         printHands();
         if(dealer.getHand().checkBust()){
-            System.out.println("Dealer BUSTED! Iedereen wint!!!!!");
+            System.out.println(" Dealer BUSTED! Iedereen wint!!!!!");
         }
         else if(dealer.getHand().checkBlackJack()){
-            System.out.println("Dealer heeft BlackJack, dealer wint!");
+            System.out.println(" Dealer heeft BlackJack, dealer wint!");
         }
         else{
             for(Player pl:players){
                 if(pl.getHand().checkBust()){
-                    System.out.println(pl.getName()+ "BUSTED! Better luck next time");
+                    System.out.println(pl.getName()+ " BUSTED! Better luck next time");
                 }
                 else if(pl.getHand().checkBlackJack()){
                     System.out.println(pl.getName() + " got a !!!!!!!!!!!BLACKJACK!!!!!!!!!!!!!!!!!");
                 }
                 else if(pl.getHand().getValue()<=dealer.getHand().getValue()){
-                    System.out.println(pl.getName() + "has a lower amount as the dealer. Better luck next time");
+                    System.out.println(pl.getName() + " has a lower amount as the dealer. Better luck next time");
                 }
                 else{
-                    System.out.println("Proficiat" + pl.getName() +". U heeft gewonnen!");
+                    System.out.println(" Proficiat" + pl.getName() +". U heeft gewonnen!");
                 }
             }
         }
