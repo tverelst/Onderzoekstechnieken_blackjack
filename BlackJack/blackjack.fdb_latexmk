@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1429277182 "blackjack.tex" "blackjack.pdf" "blackjack" 1429277214
+  "/usr/local/texlive/2014basic/texmf-dist/tex/latex/psnfss/ot1ptm.fd" 1137110629 961 15056f4a61917ceed3a44e4ac11fcc52 ""
+  "IEEEtran.cls" 1429267971 202657 f6698b073bb6e66a6e6436a00d85499c ""
+  "blackjack.aux" 1429277135 923 7ea6c001d4526cd7af4254a7720f880d ""
+  "blackjack.tex" 1429277180 2472 a4ffce06e4cc2b74f3a51b5511819f58 ""
+  "datetime.sty" 0 -1 0 ""
+  (generated)
+  "blackjack.log"
+  "blackjack.pdf"
+  "blackjack.aux"
