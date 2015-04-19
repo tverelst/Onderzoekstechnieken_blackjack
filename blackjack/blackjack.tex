@@ -12,33 +12,32 @@ In deze paper toetsen we of we het casino kunnen verslaan in blackjack. We zulle
 \end{abstract}
 
 \section{Voorwoord}
-Tijdens ons project Onderzoekstechnieken gaan we op zoek naar enkele invloeden op de winst bij een ronde BlackJack, naargelang het aantal spelers, waarbij 1 speler (die we aanschouwen als onszelf) gebruik maakt van de Card Counting Strategy en alle andere spelers de basic Strategy toepassen. De resultaten van dit onderzoek zullen aantonen dat de speler die gebruik maakt van de Card Counting Strategy een relatief hoge kans maakt om de ronde te winnen ten opzichte van de spelers die de basic strategy toepassen. Met behulp van enkele simulaties hebben we de nodige data verzameld, daarna hebben we deze geanalyseerd en uiteindelijk kunnen dan conclusies trekken met behulp van enkele tabellen of grafieken.
+Tijdens ons project Onderzoekstechnieken gaan we op zoek naar enkele invloeden op de winst bij een ronde BlackJack, naargelang het aantal spelers, waarbij 1 speler (die we aanschouwen als onszelf) gebruik maakt van de Card Counting Strategy en alle andere spelers de Basic Strategy toepassen. De resultaten van dit onderzoek zullen aantonen dat de speler die gebruik maakt van de Card Counting Strategy een relatief hoge kans maakt om de ronde te winnen ten opzichte van de spelers die de Basic Strategy toepassen. Met behulp van enkele simulaties hebben we de nodige data verzameld, daarna hebben we deze geanalyseerd en uiteindelijk kunnen dan conclusies trekken met behulp van enkele tabellen of grafieken.
 
 \section{Aanpak}
 Voor ons onderzoek moeten we enkele simulaties maken in verschillende situaties. Als we dit niet zouden doen dan zouden we onze hypothese niet kunnen bewijzen.
-Bij deze simulaties
 
 \subsection{Strategie\"en}
 
 Wanneer je blackjack speelt kun je best vertrouwen op een vast schema of een strategie. Dit zorgt ervoor dat je je resultaten gemakkelijk kunt evalueren.
 Door te experimenteren met de gekozen strategie kan men dus een beter resultaat bekomen. Deze strategie moet dan wel veelvuldig getest worden.
 
-Basic Strategy is de basisstrategie bij uitstek. Beginnende blackjackspelers gaan deze strategie gebruiken wanneer ze ter ontspanning in een casino spelen. Het gevoel dat je een bestaande en bewezen strategie gebruikt is toch een geruststalling voor veel spelers.
-Bij basic strategy wordt geen rekening gehouden met de card count van de tafel.
+Basic Strategy is de basisstrategie bij uitstek. Beginnende blackjackspelers gaan deze strategie gebruiken wanneer ze ter ontspanning in een casino spelen. Het gevoel dat je een bestaande en bewezen strategie gebruikt is toch een geruststelling voor veel spelers.
+Bij Basic Strategy wordt geen rekening gehouden met de card count van de tafel.
 
 Red7shoeH17DASI18 is een strategie die gebruikt maakt van card counting. Deze strategie zorgt ervoor dat je een beter idee krijgt wanneer je hoger moet inzetten.
 Verdere uitleg over de count strategie vind je verder in de paper.
 \newline
 \subsubsection{Basic Strategie}
 
-Raadplaag tabel \ref{table:basic} achteraan in de paper.
+Raadpleeg tabel \ref{table:basic} achteraan in de paper.
 
-De betekenis van 'Stiff hand': Als de eerste kaarten een totaal geven van 12-16, is dit een Stiff hand'. Wanneer dit voor de speler het geval is, en ook de dealer heeft een Stiff hand (hand tussen 2 en 6), dan moet je 'Standen'. Heeft de dealer echter een 'Pat' ( hand tussen 7 en Ace), dan moet de speler 'Hitten'. 
+De betekenis van 'Stiff hand': Als de eerste kaarten een totaal geven van 12-16, is dit een Stiff hand'. Wanneer dit voor de speler het geval is, en ook de dealer heeft een Stiff hand (hand tussen 2 en 6), dan moet je 'Standen'. Heeft de dealer echter een 'Pat' ( hand tussen 7 en Ace), dan moet de speler 'Hitten'.
 'Doubling down hands' betekent het verdubbelen van je bet, en dit doet de speler wanneer zijn eerste kaarten een totaal geven tussen 9 en 11 punten.
 \newline
 \subsubsection{Count Strategie}
 
-Bij Card Counting wordt rekening gehouden met de kaarten die al gespeeld zijn. Doordat men deze kaarten al weet kan men de kans inschatten dat andere kaarten gaan vallen tijdens het spel. Dit zorgt voor een voordeel voor de speler. Casino-spellen zijn meestal in het nadeel van de speler maar door deze strategiën goed toe te passen kan men het verlies beperken of zelfs winst maken.
+Bij Card Counting wordt rekening gehouden met de kaarten die al gespeeld zijn. Doordat men deze kaarten al weet kan men de kans inschatten dat andere kaarten gaan vallen tijdens het spel. Dit zorgt voor een voordeel voor de speler. Casino-spellen zijn meestal in het nadeel van de speler maar door deze strategie\"en goed toe te passen kan men het verlies beperken of zelfs winst maken.
 Alle kaarten krijgen een bepaalde waarde toegewezen en wanneer de kaarten voorkomen in het spel wordt een centrale count bijgehouden.
 Deze centrale count geeft de speler een idee welke kaarten de grootste kans hebben om te vallen. Dit is een belangerijk voordeel voor de speler.
 \newline
@@ -49,9 +48,8 @@ Aan de hand van de count strategie kan men de inzet per spel aanpassen. Als er e
 \subsection{Simulatiesoftware}
 
 Voor dit onderzoek hebben we bestaande software gebruikt, meerbepaald powersim. Powersim geeft de onderzoeker de mogelijkheid om veel situaties te simuleren.
-Het testen van de strategieën en situaties in een casino zou onmogelijk zijn. De hoeveelheid van handen, die gesimuleerd moeten worden, zou veel te veel geld kosten.
+Het testen van de strategie\"en en situaties in een casino zou onmogelijk zijn. De hoeveelheid van handen, die gesimuleerd moeten worden, zou veel te veel geld kosten.
 Het formaat waarin de resultaten worden opslagen liet toch wel we de wensen over.
-Dit omzetten naar csv formaat bleek toch niet zo gemakkelijk.
 
 \subsection{Uitwerking}
 
@@ -112,6 +110,9 @@ We kunnen dus afleiden dat je op lange termijn altijd verlies zult maken, ookal 
 
 \begin{thebibliography}{1}
 \bibitem{IEEEhowto:kopka}
+N. Richard Werthamer, \emph{Risk and Reward: The Science of Casino Blackjack} \hskip 1em plus
+0.5em minus 0.4em\relax Boek - July, 2009
+\bibitem{IEEEhowto:kopka}
 Ariell Zimran, Anna Klis, Alejandra Fuster and Christopher Rivelli, \emph{The Game of Blackjack and Analysis of Counting Cards }\hskip 1em plus 0.5em minus 0.4em\relax Paper - December, 2009
 \bibitem{IEEEhowto:kopka}
 Arthur T. Benjamin and Eric Huggins, \emph{Optimal BlackJack Strategy with "Lucky Bucks" }\hskip 1em plus
@@ -131,7 +132,7 @@ Kenneth R Smith, \emph{Blackjack Basic Strategy Chart: 4/6/8 Decks, Dealer Hits 
 \bibitem{IEEEhowto:kopka}
 \emph{Release of Blackjack PowerSim Open Source Card Counting Simulation Software}\hskip 1em plus
   0.5em minus 0.4em\relax geraadpleegd op 2 april 2015 via {http://www.blackjackforumonline.com/content/SimSimp\_Beta.htm}
-	
+
 \end{thebibliography}
 
 \begin{multicols}
