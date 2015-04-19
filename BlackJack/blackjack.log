@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.15)  19 APR 2015 14:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.15)  19 APR 2015 15:08
 entering extended mode
 **blackjack.tex
 (D:\Hogent\BlackJack\Onderzoekstechnieken_blackjack_groep29\BlackJack\blackjack.tex
@@ -113,6 +113,9 @@ LaTeX Warning: Label `IEEEhowto:kopka' multiply defined.
 
 LaTeX Warning: Label `IEEEhowto:kopka' multiply defined.
 
+
+LaTeX Warning: Label `IEEEhowto:kopka' multiply defined.
+
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
@@ -126,28 +129,34 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
-Missing character: There is no ë in font ptmr7t!
 Missing character: There is no ë in font ptmri7t!
+Missing character: There is no ë in font ptmr7t!
+Missing character: There is no é in font ptmr7t!
+Missing character: There is no é in font ptmr7t!
+Missing character: There is no ë in font ptmr7t!
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 43.
+(Font)              <7> on input line 67.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 43.
+(Font)              <5> on input line 67.
 
-Overfull \hbox (4.86922pt too wide) in paragraph at lines 43--49
+Overfull \hbox (4.86922pt too wide) in paragraph at lines 67--73
  [] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-Overfull \hbox (6.7095pt too wide) in paragraph at lines 65--72
+
+]
+Overfull \hbox (6.7095pt too wide) in paragraph at lines 89--96
  [] 
  []
 
 ! Misplaced alignment tab character &.
-l.84 Arthur T. Benjamin &
-                          Eric Huggins, \emph{Optimal BlackJack Strategy wit...
+l.108 Arthur T. Benjamin &
+                           Eric Huggins, \emph{Optimal BlackJack Strategy wi...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -155,13 +164,9 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+[2
 
-
-] [2
-
-]
-(D:\Hogent\BlackJack\Onderzoekstechnieken_blackjack_groep29\BlackJack\blackjack.aux)
+] (D:\Hogent\BlackJack\Onderzoekstechnieken_blackjack_groep29\BlackJack\blackjack.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -173,11 +178,11 @@ Here is how much of TeX's memory you used:
  4267 multiletter control sequences out of 15000+200000
  36945 words of font info for 66 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 26i,7n,19p,720b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 26i,7n,19p,719b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Program Files/MikTex/fonts/enc/dvips/fontname/8r.enc}<D:/Program Files/MikTex/fonts/type1/urw/times/utmb8a.pfb><D:
 /Program Files/MikTex/fonts/type1/urw/times/utmbi8a.pfb><D:/Program Files/MikTex/fonts/type1/urw/times/utmr8a.pfb><D:/Pr
 ogram Files/MikTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on blackjack.pdf (2 pages, 61132 bytes).
+Output written on blackjack.pdf (2 pages, 62182 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
