@@ -8,30 +8,53 @@
 
 
 \begin{abstract}
-Tijdens ons project Onderzoekstechnieken gaan we op zoek naar de invloed op de winst bij een ronde BlackJack, naargelang het aantal spelers, waarbij 1 speler (die we aanschouwen als onszelf) gebruik maakt van de Card Counting Strategy en alle andere spelers de basic Strategy toepassen. De resultaten van dit onderzoek zullen aantonen wanneer de speler die gebruik maakt van de Card Counting Strategy een relatief hoge kans maakt om de ronde te winnen, of wanneer hij het net bij een kleine bet moet houden. Met behulp van enkele simulaties hebben we de nodige data verzameld, daarna hebben we deze geanalyseerd en uiteindelijk tonen we aan wat we onderzocht hebben door gebruik te maken van grafieken. 
 \end{abstract}
 
 \section{Voorwoord}
-Om duidelijk te maken welke strategieën we gaan gebruiken, zullen we deze beiden kort toelichten. 
-Eerst hebben we de Basic Strategy (zie onderstaande tabel).
-
-De betekenis van 'Stiff hand': Als de eerste kaarten een totaal geven van 12-16, is dit een Stiff hand'. Wanneer dit voor de speler het geval is, en ook de dealer heeft een Stiff hand (hand tussen 2 en 6), dan moet je 'Standen'. Heeft de dealer echter een 'Pat' ( hand tussen 7 en Ace), dan moet de speler 'Hitten'. 
-'Doubling down hands' betekent het verdubbelen van je bet, en dit doet de speler wanneer zijn eerste kaarten een totaal geven tussen 9 en 11 punten.
-
-De tweede strategie die we gebruiken tijdens dit onderzoek is de Card Counting Strategy. 
- 
-\hfill \today
+Tijdens ons project Onderzoekstechnieken gaan we op zoek naar de invloed op de winst bij een ronde BlackJack, naargelang het aantal spelers, waarbij 1 speler (die we aanschouwen als onszelf) gebruik maakt van de Card Counting Strategy en alle andere spelers de basic Strategy toepassen. De resultaten van dit onderzoek zullen aantonen wanneer de speler die gebruik maakt van de Card Counting Strategy een relatief hoge kans maakt om de ronde te winnen, of wanneer hij het net bij een kleine bet moet houden. Met behulp van enkele simulaties hebben we de nodige data verzameld, daarna hebben we deze geanalyseerd en uiteindelijk tonen we aan wat we onderzocht hebben door gebruik te maken van grafieken.
 
 \section{Aanpak}
+Voor het onderzoek moeten we situaties simuleren. Wanneer we dit niet zouden doen dan zouden we onze hypothese niet kunnen bewijzen.
+Bij deze simulaties
+
 \subsection{Strategiën}
+
+Wanneer je blackjack speelt kun je best vertrouwen op een vast schema of een strategie. Dit zorgt ervoor dat je je resultaten gemakkelijk kan evalueren.
+Door te experimenteren met de strategie kan men dus een betere resultaat hebben. Deze aangepaste strategie moet dan wel veelvuldig moeten worden getest.
+
+Basic Strategy is de basisstrategie bij uitstek. Beginnende blackjackspelers gaan deze strategie gebruiken voor te spelen op een casino. Het gevoel dat je een bestaande en bewezen strategie gebruikt is toch een geruststelleer voor veel spelers.
+Bij basic strategy wordt geen rekening gehouden met de card count van de tafel.
+
+Red7shoeH17DASI18 is een strategie die gebruikt maakt van card counting. Deze strategie zorgt ervoor dat je een beter idee hebt wanneer je hoger moet inzetten.
+Verder uitleg gaat gegeven worden in de count strategie sectie.
+
 \subsubsection{Count Strategie}
+
+Bij Card Counting wordt rekening gehouden met de kaarten die al gespeeld zijn. Doordat men deze kaarten al weet kan men de kans inschatten dat andere kaarten gaan vallen tijdens het spel. Dit zorgt voor een voordeel voor de speler. Casino-spellen zijn in het nadeel van de speler maar door deze strategiën goed te gebruiken kan men het verlies beperken of zelfs winst maken.
+Kaarten krijgen een bepaalde waarde toegewezen, wanneer de kaarten voorkomen in het spel wordt een centrale count bijgehouden.
+Deze centrale count geeft een idee aan de speler welke kaarten het meeste kans hebben om te vallen. Dit is een belangerijk voordeel voor de speler.
+
+
+
 \subsubsection{Betting Strategie}
+
+Aan de hand van de count strategie kan men de inzet per spel aanpassen. Als er een grotere kans is dat je 21 kunt hebben dan zal je hoger inzetten. Spelers die basic strategy gebruiken doen aan flat betting. Dit betekent dat ze altijd dezelfde hoeveelheid inzetten. Je inzet aanpassen is ook één van de belangerijkste factoren om je winstgevendheid te onderhouden.
+
 \subsection{Simulatiesoftware}
+
+Voor dit onderzoek hebben we bestaande software gebruikt. Meerbepaald powersim. Powersim geeft de onderzoeker de mogelijkheid om veel situaties te simuleren.
+Het testen van strategiën en situaties in een casino zou onmogelijk zijn. De hoeveelheid van handen, die gesimuleerd moeten worden, zou veel te veel geld kosten.
+Het formaat waarin de resultaten worden opslagen laat toch wel we de wensen over.
+Dit omzetten naar csv formaat bleek toch niet zo gemakkelijk.
+
 \subsection{Uitwerking}
+
+Voor het onderzoek hebben we vier tafels van 10 000 000 handen gesimuleerd. Er zijn tafels van 1, 2, 3 en 4 personen. De persoon, die een card counting strategie, is altijd de eerste speler. De andere spelers maken gebruik van basic strategy.
+Doordat de andere spelers basic strategy gebruiken en dus geen card count bijhouden, kunnen we ze alleen maar dezelfde inzet laten gebruiken.
 
 \section{Resultaten}
 \subsection{Aantal spelers als variabele}
-We bekijken eerst wat de invloed is van het aantal spelers aan de tafel. 
+We bekijken eerst wat de invloed is van het aantal spelers aan de tafel.
 Onze speler gebruikt een countstrategie, terwijl de andere spelers aan zijn tafel een gewone basic strategy toepassen. Het startkrediet is telkens \textdollar 10.000 en er worden telkens 10.000.000 rondes gespeeld. In tabel \ref{table:spelers} wordt het resterende krediet ook in percent ten op zichte van het startkrediet getoond, zodat duidelijk is dat het verschil minimaal is.
 
 \begin{table}[h]
@@ -47,7 +70,7 @@ Krediet & \textdollar 96,78 & \textdollar 107,77 & \textdollar 92,82 & \textdoll
 Percent & 0,9678\% & 1,077\% & 0,9282\% & 1,1127\% \\
 \end{tabular}
 \end{center}
-\end{table} 
+\end{table}
 
 \subsection{Vergelijking met de andere spelers}
 Mits het duidelijk is dat er toch nog verlies wordt gemaakt, vergelijken we nu de resultaten met de resultaten van de andere spelers aan tafel. We maken hier enkel de vergelijking wanneer er vier spelers aan de tafel zitten, want in dat scenario hadden uiteindelijk het minste verlies.
@@ -70,7 +93,7 @@ Percent & 1,1127\% & -0.3324\% & -0,3568\% & 0,9282\% \\
 Risk of ruin & 13,53\% & 100\% & 100\% & 100\% \\
 \end{tabular}
 \end{center}
-\end{table} 
+\end{table}
 
 \section{Conclusies}
 
