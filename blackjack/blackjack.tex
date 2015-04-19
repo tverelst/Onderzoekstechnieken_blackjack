@@ -18,7 +18,7 @@ Tijdens ons project Onderzoekstechnieken gaan we op zoek naar enkele invloeden o
 Voor ons onderzoek moeten we enkele simulaties maken in verschillende situaties. Als we dit niet zouden doen dan zouden we onze hypothese niet kunnen bewijzen.
 Bij deze simulaties
 
-\subsection{Strategieën}
+\subsection{Strategie\"en}
 
 Wanneer je blackjack speelt kun je best vertrouwen op een vast schema of een strategie. Dit zorgt ervoor dat je je resultaten gemakkelijk kunt evalueren.
 Door te experimenteren met de gekozen strategie kan men dus een beter resultaat bekomen. Deze strategie moet dan wel veelvuldig getest worden.
@@ -31,10 +31,7 @@ Verdere uitleg over de count strategie vind je verder in de paper.
 \newline
 \subsubsection{Basic Strategie}
 
-Percent & 0,9678\% & 1,077\% & 0,9282\% & 1,1127\% \\
-\end{tabular}
-\end{center}
-\end{table}
+Raadplaag tabel \ref{table:basic} achteraan in de paper.
 
 De betekenis van 'Stiff hand': Als de eerste kaarten een totaal geven van 12-16, is dit een Stiff hand'. Wanneer dit voor de speler het geval is, en ook de dealer heeft een Stiff hand (hand tussen 2 en 6), dan moet je 'Standen'. Heeft de dealer echter een 'Pat' ( hand tussen 7 en Ace), dan moet de speler 'Hitten'. 
 'Doubling down hands' betekent het verdubbelen van je bet, en dit doet de speler wanneer zijn eerste kaarten een totaal geven tussen 9 en 11 punten.
@@ -106,8 +103,11 @@ Risk of ruin & 13,53\% & 100\% & 100\% & 100\% \\
 
 \section{Conclusies}
 
-Uit de eerste tabel kunnen we concluderen dat het aantal spelers in dit specifieke geval, enkel 1 speler die card counting toepast, geen grote invloed heeft op ons resultaat. Het krediet na 10 milioen keer spelen schommelt telkens tussen 92,82 (bij 3 spelers) en 111,27 (bij 4 spelers). In geen enkel geval loopt de speler het gevaar om al zijn krediet kwijt te spelen, in alle gevallen blijf enkel nog ongeveer 1 percent van het startkrediet over.
+Uit de eerste tabel kunnen we concluderen dat het aantal spelers in dit specifieke geval, enkel 1 speler die card counting toepast, geen grote invloed heeft op ons resultaat. Dit komt waarschijnlijk door de betting strategie die we hebben besloten toe te passen. Deze zal kijken naar onze winstkansen en een percentage van ons van het resterende krediet inzetten. Het resterende krediet na 10 milioen keer spelen schommelt telkens tussen 92,82 (bij 3 spelers) en 111,27 (bij 4 spelers). In geen enkel geval loopt de speler het gevaar om al zijn krediet kwijt te spelen, in alle gevallen blijf enkel nog ongeveer 1 percent van het startkrediet over.
+
 In het geval van 4 tegenstanders zien we dat enkel de speler die cardcounting toepast nog krediet over heeft, de rest van de spelers die basic strategy toepassen maken allemaal verlies.
+
+We kunnen dus afleiden dat je op lange termijn altijd verlies zult maken, ookal pas je een superieure strategie toe ten opzichte van de andere spelers. Natuurlijk kan je als je minder spelletjes speelt en geluk hebt wel winst maken op korte termijn, maar dit is zeker geen goede mannier om geld te gaan verdienen in casino's
 
 
 \begin{thebibliography}{1}
@@ -122,6 +122,42 @@ Don Schlesinger, \emph{Blackjack Attack: Playing the Pros' Way }\hskip 1em plus
 \bibitem{IEEEhowto:kopka}
 Kenneth R Smith, \emph{Blackjack Basic Strategy Chart: 4/6/8 Decks, Dealer Hits Soft 17 }\hskip 1em plus
   0.5em minus 0.4em\relax Cards - October, 2008
+\bibitem{IEEEhowto:kopka}
+\emph{High-Low Card Counting Strategy Introduction}\hskip 1em plus
+  0.5em minus 0.4em\relax  geraadpleegd op 2 april 2015 via {http://wizardofodds.com/games/blackjack/card-counting/high-low/}
+\bibitem{IEEEhowto:kopka}
+\emph{How to use blackjack strategy trainer}\hskip 1em plus
+  0.5em minus 0.4em\relax 2 geraadpleegd op april 2015 via {http://blackjackisonline.com/blackjack-strategy-trainer.aspx}
+\bibitem{IEEEhowto:kopka}
+\emph{Release of Blackjack PowerSim Open Source Card Counting Simulation Software}\hskip 1em plus
+  0.5em minus 0.4em\relax geraadpleegd op 2 april 2015 via {http://www.blackjackforumonline.com/content/SimSimp\_Beta.htm}
+	
 \end{thebibliography}
+
+\begin{multicols}
+\begin{table}[p]
+\normalsize
+\caption{Basic Strategy}
+\label{table:basic}
+\begin{center}
+\def\arraystretch{1.5}
+\begin{tabular}{c| l | l}
+\textbf{Type of hand} & \textbf{Description} & \textbf{Basic strategy}\\
+\hline
+Soft hands & Card combination includes and ace &  Stand if \geq 18\\
+& &  Hit if \leq17\\
+	\hline
+Hard hands & Card combination includes no ace &  Hit if \leq 8 \\
+& Ace in hand counts as 1 point &  Stand if \geq17\\
+& & Stiff hands if between 12\& 16\\
+& & Doubling down hands if between 9 \& 11\\
+\hline
+Splitting pairs  & Card combination includes & Always split if aces\\
+hands & the cards of equal rank & Never split if 5 \& 10\\
+
+\end{tabular}
+\end{center}
+\end{table}
+\end{multicols}
 
 \end{document}
